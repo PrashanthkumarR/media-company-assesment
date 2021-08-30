@@ -1,0 +1,26 @@
+<mat-toolbar color="accent">
+  <button mat-icon-button class="btn-nav" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Media XYZ</span>
+  <span class="example-spacer"></span>
+  <button mat-button class="btn-nav" [routerLink]="['/home']">
+    Home
+  </button>
+  <button mat-button class="btn-nav" *ngIf="isLoggedIn" routerLink="/home/gallary">
+    Gallary
+  </button>
+  <button mat-button class="btn-nav" routerLink="/home/about">
+    About
+  </button>
+  <button mat-button class="btn-nav" *ngIf="!isLoggedIn" routerLink="/login">
+    Sign In
+  </button>
+  <button mat-button class="btn-nav" *ngIf="isLoggedIn" (click)="logOut()">
+    Logout
+  </button>
+  <button mat-button class="btn-nav" *ngIf="isLoggedIn">
+    <mat-icon>account_circle</mat-icon> {{userInfo['username']}}
+  </button>
+
+</mat-toolbar>

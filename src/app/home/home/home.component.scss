@@ -1,0 +1,45 @@
+.mention-area {
+  border-radius: 10px;
+  width: 100%;
+  border: 1.5px solid;
+  border-color: #f1a32f;
+}
+
+.text-area-block {
+  padding: 20px;
+}
+
+.header {
+  padding: 80px;
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+.main {
+  -ms-flex: 70%;
+  /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+ul , li {
+   list-style: none;
+   background-color: white;
+}
+
+li {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 2px;
+}

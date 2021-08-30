@@ -1,0 +1,18 @@
+<div class="main-header" fxLayout="row" fxLayoutAlign="center start">
+    <h1 >Media Gallary</h1>
+</div>
+
+<section >
+    <a href="" *ngFor="let item of imagePostArray; index as i">
+      <div class="image">
+        <img src={{item.imgUrl}} alt="">
+        <div>
+          <h2 class="seen"><mat-icon>remove_red_eye</mat-icon> {{item.seen}}
+          </h2>
+          <h2 class="likes"><mat-icon>thumb_up</mat-icon> {{item.like}}
+          </h2>
+        </div>
+      </div>
+    </a>
+  </section>
+  

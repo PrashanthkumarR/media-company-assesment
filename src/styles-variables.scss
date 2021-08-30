@@ -1,0 +1,18 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+@mixin smallDevices($max, $min) {
+  @media (max-width: $max) and (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin largeDevices($min) {
+  @media (min-width: $min) {
+    @content;
+  }
+}

@@ -1,0 +1,38 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div fxLayout="column" fxLayoutAlign="center center" class="login-container">
+    <mat-card class="kt-login-card">
+      <form [formGroup]="loginForm">
+        <mat-card-title class="card-title">
+          Login
+        </mat-card-title>
+        <mat-card-content>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="username" placeholder="Username" autocomplete="off">
+              <mat-icon matSuffix color="primary" *ngIf="!loginForm.controls['username'].errors">
+                sentiment_very_satisfied</mat-icon>
+              <mat-icon matSuffix color="warn" *ngIf="loginForm.controls['username'].errors">sentiment_very_dissatisfied
+              </mat-icon>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" matInput formControlName="password" placeholder="Password" autocomplete="off">
+              <mat-icon matSuffix color="primary" *ngIf="!loginForm.controls['password'].errors">
+                sentiment_very_satisfied</mat-icon>
+              <mat-icon matSuffix color="warn" *ngIf="loginForm.controls['password'].errors">sentiment_very_dissatisfied
+              </mat-icon>
+            </mat-form-field>
+          </p>
+        </mat-card-content>
+        <mat-card-actions class="kt-card-actions" fxLayout="row" fxLayoutAlign="center center">
+          <button mat-raised-button color="accent" (click)="onSubmit()">
+            <mat-icon>account_circle</mat-icon> Sign In
+          </button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </div>
+</div>

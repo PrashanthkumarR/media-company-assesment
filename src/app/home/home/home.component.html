@@ -1,0 +1,42 @@
+<div class="header">
+  <h1>Media XYZ </h1>
+  <p>A website created by me.</p>
+</div>
+
+<div class="text-area-block" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center">
+  <div class="relative-block-container">
+    <textarea class="mention-area" cols="42" rows="6" #textareaRef placeholder="Enter '@' and start typing..."
+      [(ngModel)]="text"></textarea>
+
+    <flx-mentions [textInputElement]="textareaRef" [menuTemplate]="menuTemplate" [triggerCharacter]="'@'"
+      [getChoiceLabel]="getChoiceLabel" (search)="loadChoices($event)"
+      (selectedChoicesChange)="onSelectedChoicesChange($event)" (menuShow)="onMenuShow()" (menuHide)="onMenuHide()">
+    </flx-mentions>
+
+    <ng-template #menuTemplate let-selectChoice="selectChoice">
+      <ul flxLoader class="flx-selectable-list" [class.loader-only]="!choices.length && loading">
+        <li *ngFor="let user of choices" class="flx-selectable-list-item" (click)="selectChoice(user)">
+          <span title="{{user.name}}">{{user.name}}</span>
+        </li>
+      </ul>
+    </ng-template>
+  </div>
+</div>
+
+
+<div class="main">
+  <h2>TITLE HEADING</h2>
+  <h5>Title description, Dec 7, 2017</h5>
+  <div class="fakeimg" style="height:200px;">Image</div>
+  <p>Some text..</p>
+  <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  <br>
+  <h2>TITLE HEADING</h2>
+  <h5>Title description, Sep 2, 2017</h5>
+  <div class="fakeimg" style="height:200px;">Image</div>
+  <p>Some text..</p>
+  <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+</div>
+

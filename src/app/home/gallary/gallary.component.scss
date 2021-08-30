@@ -1,0 +1,166 @@
+@import '../../../styles-variables.scss';
+
+.main-header {
+    background-color: #020919;
+    padding: 20px;
+  h1 {
+    margin: 1rem;
+    font-family: fantasy;
+    color: white
+  }
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.65em;
+  margin: 0 0 30px;
+  font-family: serif;
+  color: rgb(49, 48, 48);
+  font-weight: lighter;
+}
+
+.post-info {
+  padding: 10px 10px 0 10px;
+  max-height: 100px;
+  min-height: 50px;
+}
+
+.which-post {
+  h2 {
+    padding-bottom: 10px;
+    box-sizing: border-box;
+  }
+}
+
+.header {
+  padding: 0 10px;
+
+  @include largeDevices(999px) {
+    padding-bottom: 20px;
+  }
+
+  .likerange {
+    font-weight: 800;
+    font-size: 19px;
+    font-family: sans-serif;
+  }
+
+  p {
+    @include smallDevices(767px, 568px) {
+      font-size: 12px;
+      height: 54px;
+    }
+
+    @include largeDevices(768px) {
+      height: 90px;
+    }
+
+    @include smallDevices(567px, 320px) {
+      font-size: 9px;
+    }
+  }
+
+  .col-6 {
+    text-align: center;
+    font-family: monospace;
+    font-weight: lighter;
+    padding: 10px;
+    color: #0b0b0bc4;
+
+    @include largeDevices(998px) {
+      font-size: 20px !important;
+    }
+  }
+}
+
+section {
+  font-size: 0;
+
+  .image {
+    position: relative;
+    width: 100%;
+
+    img {
+      opacity: 0.7;
+    }
+
+    div {
+      position: absolute;
+      top: 70%;
+      left: 8%;
+
+      h2 {
+        font-weight: normal;
+        font-family: serif;
+        font-size: 20px;
+        font-style: oblique;
+        margin-bottom: 2px;
+
+        @include smallDevices(767px, 568px) {
+          font-size: 14px;
+        }
+
+        @include smallDevices(567px, 320px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+a {
+  font-size: 16px;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 4px);
+  margin-right: 8px;
+  color: white;
+}
+
+a:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 50em) {
+  a {
+    width: calc(25% - 6px);
+  }
+
+  a:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+
+  a:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+
+a:hover img {
+  transform: scale(1.15);
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #ccc;
+  transition: transform 0.2s ease-in-out;
+}
+
+.p a {
+  display: inline;
+  font-size: 13px;
+  margin: 0;
+}
+
+.p {
+  text-align: center;
+  font-size: 13px;
+  padding-top: 100px;
+}
